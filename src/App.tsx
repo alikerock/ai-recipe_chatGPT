@@ -84,6 +84,7 @@ function App() {
       <h1>🍳 AI 요리사</h1>
 
       <input
+        className="title-input" 
         value={title}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
         placeholder="요리 이름 입력"
