@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import RecentRecipes from "./components/RecentRecipes";
 
 type RecipeResult = {
   title: string;
@@ -78,6 +79,7 @@ function App() {
   }
 
   return (
+    <>
     <div style={{ maxWidth: 600, margin: "0 auto" }}>
       <h1>🍳 AI 요리사</h1>
 
@@ -92,6 +94,7 @@ function App() {
       </button>
 
       {result && (
+ 
         <div>
           <h2>{result.title}</h2>
           <p>{result.recipe}</p>
@@ -100,8 +103,14 @@ function App() {
             <img src={result.image_url} alt={result.title} width={300} />
           )}
         </div>
+
       )}
     </div>
+    <hr />
+    <section className="list-section">
+      <RecentRecipes />
+    </section>
+    </>
   );
 }
 
