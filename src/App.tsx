@@ -80,7 +80,7 @@ function App() {
 
   return (
     <>
-    <div style={{ maxWidth: 600, margin: "0 auto" }}>
+    <div style={{ maxWidth: 600, textAlign:'center', margin: "0 auto" }}>
       <h1>🍳 AI 요리사</h1>
 
       <input
